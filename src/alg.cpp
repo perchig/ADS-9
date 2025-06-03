@@ -1,7 +1,7 @@
 // Copyright 2025 NNTU-CS
-#include "tree.h"
 #include <memory>
 #include <vector>
+#include "tree.h"
 
 PMTree::PMTree(const std::vector<char>& input) : alphabet(input) {
   root = std::make_shared<TreeNode>();
