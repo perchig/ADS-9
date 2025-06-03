@@ -1,3 +1,4 @@
+// Copyright 2025 NNTU-CS
 #ifndef INCLUDE_TREE_H_
 #define INCLUDE_TREE_H_
 #include <vector>
@@ -22,11 +23,11 @@ class PMTree {
     std::shared_ptr<TreeNode> getRoot() const { return root; }
     const std::vector<char>& getAlphabet() const { return alphabet; }
     size_t size() const { return alphabet.size(); }
-    void getAllPermsRecursive(std::shared_ptr<TreeNode> node, 
-                             std::vector<char>& current, 
+    void getAllPermsRecursive(std::shared_ptr<TreeNode> node,
+                             std::vector<char>& current,
                              std::vector<std::vector<char>>& result) const;
 };
 std::vector<std::vector<char>> getAllPerms(const PMTree& tree);
 std::vector<char> getPerm1(PMTree& tree, int num);
 std::vector<char> getPerm2(PMTree& tree, int num);
-#endif
+#endif  // INCLUDE_TREE_H_
