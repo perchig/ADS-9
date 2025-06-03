@@ -1,12 +1,6 @@
 // Copyright 2025 NNTU-CS
 #include "tree.h"
-#include <algorithm>
-#include <cstdlib>
-#include <fstream>
-#include <iostream>
-#include <locale>
 #include <memory>
-#include <numeric>
 #include <vector>
 
 PMTree::PMTree(const std::vector<char>& input) : alphabet(input) {
@@ -84,7 +78,6 @@ std::vector<char> getPerm2(PMTree& tree, int num) {
   }
   if (num > totalPerms) return std::vector<char>();
   std::vector<char> result;
-  std::vector<char> remaining = tree.getAlphabet();
   auto node = tree.getRoot();
   int64_t currentNum = num - 1;
   for (int64_t level = n; level > 0; --level) {

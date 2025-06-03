@@ -15,9 +15,6 @@ class PMTree {
     std::shared_ptr<TreeNode> root;
     std::vector<char> alphabet;
     void buildTree(std::shared_ptr<TreeNode> node, std::vector<char> remaining);
-    void getPerm1Recursive(std::shared_ptr<TreeNode> node,
-                          std::vector<char>& current,
-                          std::vector<std::vector<char>>& allPerms) const;
  public:
     explicit PMTree(const std::vector<char>& input);
     std::shared_ptr<TreeNode> getRoot() const { return root; }
@@ -26,6 +23,9 @@ class PMTree {
     void getAllPermsRecursive(std::shared_ptr<TreeNode> node,
                              std::vector<char>& current,
                              std::vector<std::vector<char>>& result) const;
+    void getPerm1Recursive(std::shared_ptr<TreeNode> node,
+                          std::vector<char>& current,
+                          std::vector<std::vector<char>>& allPerms) const;
 };
 std::vector<std::vector<char>> getAllPerms(const PMTree& tree);
 std::vector<char> getPerm1(PMTree& tree, int num);
